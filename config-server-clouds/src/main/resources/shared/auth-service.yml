@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 12345678
+    url: jdbc:postgresql://localhost/project
+    platform: postgres
+    initialization-mode: always
+    continue-on-error: true
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+    
+server:
+  servlet:
+    context-path: /uaa
+  port: 8081
